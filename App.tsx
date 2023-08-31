@@ -39,7 +39,7 @@ export default function App() {
         duration: 300,
         useNativeDriver: true,
       }).start();
-    }, 10000);
+    }, 3000);
   };
 
   const instantPopOut = () => {
@@ -49,6 +49,7 @@ export default function App() {
       useNativeDriver: true,
     }).start();
   };
+
   return (
     <SafeAreaView
       style={{
@@ -85,26 +86,48 @@ export default function App() {
             </View>
           </TouchableOpacity>
         </Animated.View>
-
-        <TouchableOpacity
-          onPress={() => {
-            setStatus("success");
-            popIn();
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-around",
           }}
-          style={{ marginTop: 30, borderWidth: 1, borderColor: "green" }}
         >
-          <Text>sucess toast</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              setStatus("success");
+              popIn();
+            }}
+            style={{
+              marginTop: 30,
+              borderWidth: 1,
+              borderColor: "green",
+              padding: 10,
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 4,
+            }}
+          >
+            <Text>Sucess Toast</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          onPress={() => {
-            setStatus("fail");
-            popIn();
-          }}
-          style={{ marginTop: 30, borderWidth: 1, borderColor: "red" }}
-        >
-          <Text>error toast</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              setStatus("fail");
+              popIn();
+            }}
+            style={{
+              marginTop: 30,
+              borderWidth: 1,
+              borderColor: "red",
+              padding: 10,
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 4,
+            }}
+          >
+            <Text>Error Toast</Text>
+          </TouchableOpacity>
+        </View>
       </View>
       <StatusBar hidden />
     </SafeAreaView>
