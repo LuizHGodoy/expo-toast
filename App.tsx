@@ -17,12 +17,12 @@ export default function App() {
   const popAnim = useRef(new Animated.Value(windowHeight * -1)).current;
 
   const successColor = "#6dcf81";
-  const successHeader = "BOOOOOOOOORAAAAAAAAA!";
-  const successMessage = "tmj meu parcero deus te pague";
+  const successHeader = "Sucesso!";
+  const successMessage = "Tarefa concluida com sucesso!";
 
   const failColor = "#bf6060";
-  const failHeader = "tu é mo otario!";
-  const failMessage = "VAITOMANOCUSEUOTARIOFILHODAPUTAAAAAAAAA";
+  const failHeader = "Algo deu errado!";
+  const failMessage = "Erro cod: 404";
 
   const popIn = () => {
     Animated.timing(popAnim, {
