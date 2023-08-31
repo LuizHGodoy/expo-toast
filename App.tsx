@@ -91,9 +91,9 @@ export default function App() {
             setStatus("success");
             popIn();
           }}
-          style={{ marginTop: 30 }}
+          style={{ marginTop: 30, borderWidth: 1, borderColor: "green" }}
         >
-          <Text>sucesso nessaporra</Text>
+          <Text>sucess toast</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -101,9 +101,9 @@ export default function App() {
             setStatus("fail");
             popIn();
           }}
-          style={{ marginTop: 30 }}
+          style={{ marginTop: 30, borderWidth: 1, borderColor: "red" }}
         >
-          <Text>VAITOMANOCUUUUUUUUUUUUUUUUU</Text>
+          <Text>error toast</Text>
         </TouchableOpacity>
       </View>
       <StatusBar hidden />
